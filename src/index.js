@@ -7,10 +7,10 @@ import rootReducer from "./reducers";
 import { applyMiddleware, createStore } from 'redux';
 import thuck from 'redux-thunk';
 import logger from 'redux-thunk';
-import { rootReducer} from './reducers';
+
 
 const store = createStore(
-  rootReducer, applyMiddleware(thuck)
+  rootReducer, applyMiddleware(thuck, logger)
 );
 
 ReactDOM.render(
